@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/recommended"
+  ],
+  "parserOptions":  {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "semi": "error",
+    "@typescript-eslint/indent": "off",
+    "vue/singleline-html-element-content-newline": "off"
+  }
+}
