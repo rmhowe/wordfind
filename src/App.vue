@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <Header />
     <router-view></router-view>
   </div>
@@ -15,4 +15,21 @@ import Header from './components/Header.vue';
 export default class App extends Vue {}
 </script>
 
-<style></style>
+<style>
+html, body {
+  height: 100%;
+
+  text-align: center;
+  background-color: rgb(235, 245, 252);
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  max-width: 40em;
+
+  border-radius: .5em;
+  background-color: #fff;
+}
+</style>

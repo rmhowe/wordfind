@@ -1,9 +1,10 @@
 <template>
   <header>
-    <nav>
-      <ul>
-        <li v-for="route in routes" :key="route.name">
+    <nav class="nav-bar">
+      <ul class="nav-items">
+        <li v-for="route in routes" :key="route.name" class="nav-item button">
           <router-link
+            class="nav-link"
             active-class="active"
             exact
             :to="route.to"
@@ -29,4 +30,20 @@ export default class Header extends Vue {
 }
 </script>
 
-<style></style>
+<style>
+.nav-bar {
+  text-align: center;
+}
+
+.nav-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 1em;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 0 0.5em;
+  padding: 0 1em;
+}
+</style>
