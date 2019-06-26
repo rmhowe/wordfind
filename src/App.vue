@@ -1,7 +1,11 @@
 <template>
   <div class="container">
-    <Header />
-    <router-view></router-view>
+    <div class="content">
+      <Header></Header>
+      <main role="main">
+        <router-view></router-view>
+      </main>
+    </div>
   </div>
 </template>
 
@@ -16,20 +20,17 @@ export default class App extends Vue {}
 </script>
 
 <style>
-html, body {
-  height: 100%;
-
-  text-align: center;
-  background-color: rgb(235, 245, 252);
-}
-
 .container {
-  margin: 0 auto;
-  height: 100%;
+  margin: 0;
+  min-height: 100%;
   width: 100%;
   max-width: 40em;
 
   border-radius: .5em;
   background-color: #fff;
+}
+
+.content {
+  padding: 1em 2em;
 }
 </style>

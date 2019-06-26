@@ -42,7 +42,14 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader',
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              data: `
+                @import "@/styles/_variables.scss";
+              `
+            }
+          }
         ]
       },
       {
@@ -57,7 +64,8 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '@': path.resolve(__dirname, 'src')
     }
   },
   devtool: '#eval-source-map',
