@@ -17,7 +17,8 @@ export default new VueRouter({
     {
       name: 'puzzle',
       path: '/puzzles/:id',
-      component: Puzzle
+      component: Puzzle,
+      props: true
     },
     {
       name: 'settings',
