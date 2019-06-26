@@ -1,49 +1,36 @@
 <template>
-  <header>
-    <nav class="nav-bar">
-      <ul class="nav-items">
-        <li v-for="route in routes" :key="route.name" class="nav-item button">
-          <router-link
-            class="nav-link"
-            active-class="active"
-            exact
-            :to="route.to"
-          >
-            {{ route.label }}
-          </router-link>
-        </li>
-      </ul>
-    </nav>
+  <header class="header">
+    <a>
+      <fa-icon icon="arrow-left" class="nav-icon" @click="$router.go(-1)"></fa-icon>
+    </a>
+    <h1 class="title">WordFind</h1>
+    <router-link
+      active-class="active"
+      exact
+      to="settings"
+    >
+      <fa-icon icon="cog" class="nav-icon"></fa-icon>
+    </router-link>
   </header>
 </template>
 
-<script lang="ts">
-import { Vue, Component } from 'vue-property-decorator';
-
-@Component
-export default class Header extends Vue {
-  routes = [
-    { label: 'Home', to: { name: 'home' } },
-    { label: 'Puzzles', to: { name: 'puzzle', params: { id: 1 } } },
-    { label: 'Settings', to: { name: 'settings' } }
-  ]
-}
-</script>
-
-<style>
-.nav-bar {
-  text-align: center;
+<style lang="scss">
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-items {
-  list-style-type: none;
-  margin: 0;
-  padding: 1em;
+.nav-icon {
+  font-size: 1.3em;
+  color: $dark-purple;
+
+  &:hover {
+    color: $light-purple;
+  }
 }
 
-.nav-item {
-  display: inline-block;
-  margin: 0 0.5em;
-  padding: 0 1em;
+.title {
+  color: $dark-purple;
 }
 </style>

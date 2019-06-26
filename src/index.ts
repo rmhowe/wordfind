@@ -1,9 +1,10 @@
+import 'normalize.css';
+import './styles/styles.scss';
+
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-
-import 'normalize.css';
-import './styles.scss';
+import './components/Icon.ts';
 
 new Vue({
   components: { App },
