@@ -3,8 +3,7 @@
     "browser": true
   },
   "extends": [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:vue/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "parserOptions":  {
     "parser": "@typescript-eslint/parser",
@@ -17,9 +16,6 @@
   "rules": {
     "semi": "error",
     "@typescript-eslint/indent": "off",
-    "@typescript-eslint/no-unused-vars": "error",
-    "vue/html-self-closing": "off",
-    "vue/max-attributes-per-line": "off",
-    "vue/singleline-html-element-content-newline": "off"
+    "@typescript-eslint/no-unused-vars": "error"
   }
 }

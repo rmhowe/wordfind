@@ -1,12 +1,3 @@
-# WordFind
-A word-finding puzzle game built with Vue and TypeScript
+# Wordfind
 
-To build, run:
-```
-npm run build
-```
-
-To build and watch files, run:
-```
-npm start
-```
+A puzzle game about finding words :)
